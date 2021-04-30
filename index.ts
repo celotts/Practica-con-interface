@@ -69,10 +69,10 @@ console.log(nom.metodo1());
 console.log(edad.metodo2());
 
 function diHola(informacion: IRobot){
-  return "Hola "+informacion.nombre+' '+informacion.apellido;
+  return "Hola "+informacion.nombre+' '+informacion.apellido+" Tú edad es: "+informacion.edad;
 
 }
 
-let robot: IRobot = {nombre: "Carlos", apellido:" Lott"}
+let robot: IRobot = {nombre: "Carlos", apellido:" Lott",edad:48}
 
 console.log(diHola(robot))
