@@ -11,6 +11,15 @@ interface ICalificaciones {
 interface ISaludar {
   decirHola(): string;
 }
+
+interface IMiInterface1 {
+  metodo1(): string;
+}
+
+interface IMiInterface2 {
+  metodo1(): string;
+}
+
 let nota: ICalificaciones = {
   mostrarCalificaciones: () => {
     console.log("65 Puntos");
