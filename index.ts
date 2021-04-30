@@ -49,6 +49,12 @@ class MiClase implements IMiInterface1, IMiInterface2{
   }
 }
 
+interface IRobot {
+  nombre: string;
+  apellido: string;
+  edad?: number;
+}
+
 let yo: ISaludar = new SaludarEspaniol();
 let yo2: ISaludar = new SaludarIngles();
 
@@ -61,3 +67,12 @@ console.log(yo2.decirHola());
 
 console.log(nom.metodo1());
 console.log(edad.metodo2());
+
+function diHola(informacion: IRobot){
+  return "Hola "+informacion.nombre+' '+informacion.apellido;
+
+}
+
+let robot: IRobot = {nombre: "Carlos", apellido:" Lott"}
+
+console.log(diHola(robot))
