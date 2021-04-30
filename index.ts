@@ -76,3 +76,30 @@ function diHola(informacion: IRobot){
 let robot: IRobot = {nombre: "Carlos", apellido:" L.",edad:48}
 
 console.log(diHola(robot))
+
+// Casteo
+
+interface IGeometia {
+  lados: number;
+  pintar(): void
+}
+
+interface ITriangulo extends IGeometia {
+  base: number;
+  altura: number;
+}
+
+interface ICuadrado extends IGeometia{
+  lado: number;
+}
+
+function procesar(g: IGeometia){
+  if(g.lados === 4){
+    let cuadrado = g as ICuadrado
+    cuadrado.lado
+  }
+  if(g.lados === 3) {
+    let triangulo = g as ITriangulo
+    triangulo.altura
+  }
+}
