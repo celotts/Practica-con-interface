@@ -73,6 +73,6 @@ function diHola(informacion: IRobot){
 
 }
 
-let robot: IRobot = {nombre: "Carlos", apellido:" Lott",edad:48}
+let robot: IRobot = {nombre: "Carlos", apellido:" L.",edad:48}
 
 console.log(diHola(robot))
