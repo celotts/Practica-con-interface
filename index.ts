@@ -17,7 +17,7 @@ interface IMiInterface1 {
 }
 
 interface IMiInterface2 {
-  metodo1(): string;
+  metodo2(): number;
 }
 
 let nota: ICalificaciones = {
@@ -36,11 +36,28 @@ class SaludarEspaniol implements ISaludar {
 
 class SaludarIngles implements ISaludar {
   decirHola() {
-    return "Hello!!!";
+    return "Año de nacmiento";
+  }
+}
+
+class MiClase implements IMiInterface1, IMiInterface2{
+  metodo1() {
+    return "Es una prueba 1"
+  }
+  metodo2() {
+    return  1972
   }
 }
 
 let yo: ISaludar = new SaludarEspaniol();
 let yo2: ISaludar = new SaludarIngles();
+
+let nom: IMiInterface1 = new MiClase();
+let edad: IMiInterface2 = new MiClase();
+
+
 console.log(yo.decirHola());
 console.log(yo2.decirHola());
+
+console.log(nom.metodo1());
+console.log(edad.metodo2());
